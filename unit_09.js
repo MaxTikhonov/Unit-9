@@ -34,8 +34,9 @@ document.querySelector('.b-3').onclick = f3;
 // По нажатию кнопки .b-4 запускайте функцию f4, которая делает toggle класса .bg-orange для блока out-4.
 
 
+let out4 = document.querySelector('.out-4');
 function f4() {
-
+    out4.classList.toggle('bg-orange');
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -44,8 +45,14 @@ document.querySelector('.b-4').onclick = f4;
 //  Task 5
 // По нажатию .b-5 запускайте функцию f5, которая проверяет наличие класса .bg-orange у блока .out-4 (да, именно у out-4 ). Результат - true или false, выводите в .out-5.
 
+let out5 = document.querySelector('.out-5');
 function f5() {
-
+    if (out4.classList.contains('bg-orange') == true) {
+        out5.innerHTML = "true";
+    }
+    else {
+        out5.innerHTML = "false";
+    }
 }
 
 document.querySelector('.b-5').onclick = f5;
@@ -54,8 +61,17 @@ document.querySelector('.b-5').onclick = f5;
 //  Task 6
 // По нажатию .b-6 запускайте функцию f6, которая выводит в .out-6 количество параграфов с классом .p-6.
 
+let out6 = document.querySelector('.out-6');
 function f6() {
-
+    let x = 0;
+    let a = document.getElementsByTagName('p');
+    console.log(a);
+    for (let i = 0; i < a.length; i++) {
+        if (a[i].classList.contains('p-6') == true) {
+            x++;
+        }
+    }
+    out6.innerHTML = x;
 }
 
 document.querySelector('.b-6').onclick = f6;
