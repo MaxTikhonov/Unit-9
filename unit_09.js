@@ -185,8 +185,12 @@ document.querySelector('.b-13').onclick = f13;
 // Кнопка .b-14, запускает функцию f14. Функция создает через createElement div c текстом 14 и добавляет ему класс .bg-orange. Созданный div добавляется в .out-14 с помощью append.
 
 
+let out14 = document.querySelector('.out-14');
 function f14() {
-
+    let a = document.createElement('div');
+    a.classList.add('bg-orange');
+    a.innerHTML = '14';
+    out14.append(a);
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -194,8 +198,12 @@ document.querySelector('.b-14').onclick = f14;
 //  Task 15
 // Кнопкa .b-15, которая запускает функцию f15. Функция создает через createElement div c текстом 15 и добавляет ему класс .bg-orange. Созданный div добавляется перед .out-15 с помощью before.
 
+let out15 = document.querySelector('.out-15');
 function f15() {
-
+    let a = document.createElement('div');
+    a.classList.add('bg-orange');
+    a.innerHTML = '15';
+    out15.before(a);
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -203,8 +211,12 @@ document.querySelector('.b-15').onclick = f15;
 //  Task 16
 // Кнопкa .b-16, которая запускает функцию f16. Функция создает через createElement div c текстом 16 и добавляет ему класс .bg-orange. Созданный div добавляется после .out-16 с помощью after.
 
+let out16 = document.querySelector('.out-16');
 function f16() {
-
+    let a = document.createElement('div');
+    a.classList.add('bg-orange');
+    a.innerHTML = '16';
+    out16.after(a);
 }
 
 document.querySelector('.b-16').onclick = f16;
