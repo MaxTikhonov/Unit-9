@@ -124,13 +124,15 @@ for (let i = 0; i < div9.length; i++) {
 //  Task 10
 // Усложним предыдущие задачи. С помощью цикла повим на блоки .out-10 событие клик. По клику должна выполняться функция f10. Функция, должна делать toggle класса .bg-orange тому .out-10 на котором кликнули.
 
-//let div10 = тут получите все out-10
+let div10 = document.querySelectorAll('.out-10');
 
 function f10() {
-
+    this.classList.toggle('bg-orange');
 }
 
-// а тут цикл, похожий на предыдущее задание
+for (let i = 0; i < div10.length; i++) {
+    div10[i].onclick = f10;
+}
 
 
 
@@ -138,8 +140,11 @@ function f10() {
 // Кнопка .b-11, запускает функцию f11. Функция создает через createElement div c текстом 25 и добавляет его через append в .out-11.
 
 
+let out11 = document.querySelector('.out-11');
 function f11() {
-
+    let a = document.createElement('div');
+    a.innerHTML = '25';
+    out11.append(a);
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -147,9 +152,12 @@ document.querySelector('.b-11').onclick = f11;
 //  Task 12
 // Добавьте кнопку .b-12, которая запускает функцию f12. Функция создает через createElement div c текстом 12 и добавляет ему класс bg-12. Созданный div добавляется в out-12.
 
-
+let out12 = document.querySelector('.out-12');
 function f12() {
-
+    let a = document.createElement('div');
+    a.classList.add('bg-12');
+    a.innerHTML = '12';
+    out12.append(a);
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -157,8 +165,13 @@ document.querySelector('.b-12').onclick = f12;
 //  Task 13
 // Кнопка .b-13, запускает функцию f13. Функция создает через createElement div c текстом pushMe и добавляет ему класс bg-orange. Также, созданному div добавляется событие onclick, по которому выполняется функция f13_1. Созданный div добавляется в .out-13.
 
+let out13 = document.querySelector('.out-13');
 function f13() {
-
+    let a = document.createElement('div');
+    a.classList.add('bg-orange');
+    a.innerHTML = 'pushMe';
+    a.onclick = f13_1;
+    out13.append(a);
 }
 
 function f13_1() {
